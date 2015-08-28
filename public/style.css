@@ -3,8 +3,8 @@
  color: rgb(28, 29, 23);
  font-family: courier;
  font-size: 20px;
- // margin: 25px auto;
- padding: 50px 275px;
+ /* margin: 25px auto; */
+ margin: 50px 20%;
 }
 
 .form {
