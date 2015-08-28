@@ -1,0 +1,24 @@
+.container {
+  background-color: rgb(242, 242, 242);
+  color: rgb(28, 29, 23);
+  font-family: courier;
+  font-size: 20px;
+  // margin: 25px auto;
+  padding: 50px 275px;
+}
+
+.form {
+  margin: 0 auto;
+  width: 275px;
+}
+
+.textbox {
+  position: fixed;
+  height: 25px;
+  width: 275px;
+}
+
+
+body{
+  background-color: rgb(242, 242, 242);
+}
