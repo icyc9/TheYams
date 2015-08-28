@@ -9,7 +9,17 @@
 
 .form {
   margin: 0 auto;
-  width: 275px;
+  width: 400px;
+
+  background: purple;
+}
+
+.form input {
+  background: yellow;
+}
+
+.form input.button {
+  background: red;
 }
 
 .textbox {

@@ -10,18 +10,17 @@ module Google
 
   class << self
 
-    def post_email!
-      # puts "Fetching questions"
+    def subscribe(fan)
       session   = GoogleDrive.login_with_oauth(access_token)
-      # worksheet = session.file_by_title('365 QUESTION QUEUE').worksheets[0]
-      # worksheet = session.file_by_id('1OjtXCF5c2Gygx7OaOAaclywoK18iMThdGLHrHeRIGf8').worksheets[0]
+
+      return
+
       worksheet = session.file_by_id('1ds8EbOj0RPP8yRE0ZaLcZC6yUSGNv9lr8PlNS1RrCIQ').worksheets[0]
 
-      @emails = worksheet.rows.reduce([]) do |name, emails,row|
-        # puts "Question: #{ row[0] }"
-        # puts "Answers: #{ row[1] }"
-        emails << row[0]
-      end
+      puts worksheet.rows
+
+#     @emails = worksheet.rows.reduce([]) do |name, emails,row|
+#     end
     end
 
     def emails
@@ -39,6 +38,7 @@ module Google
     end
 
     def access_token
+
       @client ||= Google::APIClient.new(application_name: 'TheYams')
         .tap do |client|
 
@@ -49,6 +49,9 @@ module Google
             issuer: service_account_email_address,
             signing_key: p12key
           )
+
+      puts "In access token"
+      return
 
           client.authorization.fetch_access_token!
         end

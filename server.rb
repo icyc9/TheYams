@@ -8,6 +8,10 @@ class Server < Sinatra::Base
   end
 
   post '/emails' do
-    erb :index, locals: { name: params[:name], email: params[:email] }
+    fan = { name: params[:name], email: params[:email] }
+
+#   Google.subscribe! fan
+
+    send_file 'views/thanks.html'
   end
 end
