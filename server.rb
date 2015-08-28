@@ -1,9 +1,10 @@
 require 'sinatra'
 
-
 class Server < Sinatra::Base
+  set :public, 'public'
+
   get '/' do
-    erb :index
+    send_file 'views/index.html'
   end
 
   post '/emails' do
