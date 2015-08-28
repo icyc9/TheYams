@@ -4,7 +4,6 @@ require 'sinatra'
 class Server < Sinatra::Base
   get '/' do
     erb :index
-    erb :style
   end
 
   post '/emails' do
