@@ -7,12 +7,6 @@
  margin: 50px 20%;
 }
 
-.form {
-  display: none;
-  margin: 0 auto;
-  width: 400px;
-}
-
 .textbox {
  position: fixed;
  height: 25px;
