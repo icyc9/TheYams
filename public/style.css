@@ -1,18 +1,39 @@
 .container {
- background-color: rgb(242, 242, 242);
- color: rgb(28, 29, 23);
- font-family: courier;
- font-size: 20px;
- /* margin: 25px auto; */
- margin: 50px 20%;
+  text-align: justify;
+  margin: 80px 8% 50px;
+  color: rgb(28, 29, 23);
+  font: 1.8vw/34px courier;
+  background-color: rgb(242, 242, 242);
+}
+
+/* HD External Monitor ----------- */
+@media (min-width : 1824px) {
+  /* Styles */
+  .container {
+    margin: 100px 8% 50px;
+    font: 1.8vw/65px courier;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media (max-width : 1823px) { }
+
+/* Mobile ----------- */
+@media (max-width : 414px) {
+  /* Styles */
+
+  .container {
+    text-align: left;
+    margin: 30px 3% 50px;
+    font: 4.0vw/21px courier
+  }
 }
 
 .textbox {
- position: fixed;
- height: 25px;
- width: 275px;
+  width: 275px;
+  height: 25px;
+  position: fixed;
 }
-
 
 body{
  background-color: rgb(242, 242, 242);
